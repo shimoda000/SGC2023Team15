@@ -1,0 +1,15 @@
+.vs/
+.vscode/
+Build/
+Library/
+Logs/
+obj/
+Temp/
+UserSettings/
+*.csproj
+*.sln
+*.vsconfig
+Packages/**/*.json
+ProjectSettings/**/*.txt
+ProjectSettings/**/SceneTemplateSettings.json
+UnityEngine.TestRunner.csproj.user
