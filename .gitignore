@@ -9,7 +9,6 @@ UserSettings/
 *.csproj
 *.sln
 *.vsconfig
-Packages/**/*.json
 ProjectSettings/**/*.txt
 ProjectSettings/**/SceneTemplateSettings.json
 UnityEngine.TestRunner.csproj.user
