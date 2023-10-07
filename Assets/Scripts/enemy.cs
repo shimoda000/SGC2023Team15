@@ -5,16 +5,13 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     [SerializeField]
-    private Vector3 m_Playerpos;   //目的の座標(仮)
+    private GameObject m_Player;   //プレイヤーのゲームオブジェクト取得
    
     [SerializeField]
     private float m_Speed;         //速さ
 
     [SerializeField]
     private int m_nLife;           //体力
-
-    public void SetLife(int nlife) { m_nLife = nlife; }   //体力設定
-    public int GetLife() { return m_nLife; }              //体力取得
 
     //敵の状態の列挙
     private enum STATE
@@ -33,7 +30,9 @@ public class enemy : MonoBehaviour
         //初期化
         m_state = STATE.NONE;
         m_nDamegeCounter = 0;
-    }
+
+        m_Player = GameObject.Find("Player");
+   }
 
     // Update is called once per frame
     void Update()
@@ -54,11 +53,11 @@ public class enemy : MonoBehaviour
                 break;
         }
 
-        if(Vector2.Distance(transform.position, m_Playerpos) > 0.1f)
+        if (Vector2.Distance(transform.position, m_Player.transform.position) > 0.1f)
         {//プレイヤーとの距離が0.1未満になるまで
 
             //敵をプレイヤーの方に向かせる
-            Quaternion rot = Quaternion.LookRotation(m_Playerpos - transform.position, Vector2.up);
+            Quaternion rot = Quaternion.LookRotation(m_Player.transform.position - transform.position, Vector2.up);
 
             rot.y = 0;
             rot.x = 0;
@@ -66,12 +65,7 @@ public class enemy : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, rot, 0.1f);
 
             //敵のプレイヤーの方に移動させる
-            transform.position = Vector2.MoveTowards(transform.position, m_Playerpos, m_Speed);
-        }
-
-        if(Input.GetKey(KeyCode.U))
-        {
-            m_state = STATE.DAMEGE;
+            transform.position = Vector2.MoveTowards(transform.position, m_Player.transform.position, m_Speed);
         }
     }
 
@@ -96,7 +90,7 @@ public class enemy : MonoBehaviour
         //状態をダメージにする
         m_state = STATE.DAMEGE;
 
-        if (m_nLife >= 0)
+        if (m_nLife <= 0)
         {//体力が0以下
 
             //自分を破棄

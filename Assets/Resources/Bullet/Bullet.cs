@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject m_enemy;   //ゲームオブジェクト取得
+
     public float speed;
     public Vector3 direction;
     private void OnCollisionEnter2D(Collision2D collision)
@@ -11,6 +14,12 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("EnemyHit");
+
+            //敵のインスタンスを取得
+            enemy enemy = collision.gameObject.GetComponent<enemy>();
+
+            enemy.Hit();
+
             Destroy(gameObject);
         }
     }
