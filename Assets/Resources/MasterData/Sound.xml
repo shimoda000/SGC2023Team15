@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="Shift_JIS"?>
+
+<sounds>
+
+	<sound>
+		<name>足音</name>
+		<id>footstep</id>
+		<assetName>Sound/footstep01</assetName>
+	</sound>
+
+	<sound>
+		<name>スイッチ音</name>
+		<id>switch</id>
+		<assetName>Sound/switch02</assetName>
+	</sound>
+
+	<sound>
+		<name>風の音</name>
+		<id>wind</id>
+		<assetName>Sound/wind</assetName>
+		<volume>0.5</volume>
+	</sound>
+
+	<sound>
+		<name>スプレー音</name>
+		<id>spray</id>
+		<assetName>Sound/spray</assetName>
+	</sound>
+
+	<sound>
+		<name>銃声</name>
+		<id>shot</id>
+		<assetName>Sound/shot</assetName>
+	</sound>
+
+	<sound>
+		<name>物音</name>
+		<id>enemy01</id>
+		<assetName>Sound/sound12</assetName>
+	</sound>
+
+	<sound>
+		<name>物音</name>
+		<id>enemy02</id>
+		<assetName>Sound/ignition01</assetName>
+	</sound>
+
+	<sound>
+		<name>プレイヤーHit音</name>
+		<id>playerhit</id>
+		<assetName>Sound/playerhit</assetName>
+	</sound>
+
+</sounds>
