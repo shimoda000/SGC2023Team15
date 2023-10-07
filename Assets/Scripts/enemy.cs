@@ -13,6 +13,8 @@ public class enemy : MonoBehaviour
     [SerializeField]
     private int m_nLife;           //体力
 
+    private SpriteRenderer m_Color;
+
     //敵の状態の列挙
     private enum STATE
     {
@@ -28,10 +30,11 @@ public class enemy : MonoBehaviour
     void Start()
     {
         //初期化
+        m_Player = GameObject.Find("Player");
+        m_Color = transform.Find("enemy").GetComponent<SpriteRenderer>();
+
         m_state = STATE.NONE;
         m_nDamegeCounter = 0;
-
-        m_Player = GameObject.Find("Player");
    }
 
     // Update is called once per frame
@@ -42,7 +45,7 @@ public class enemy : MonoBehaviour
             case STATE.NONE:  //通常状態
 
                 //色がもとに戻るよ
-                GetComponent<SpriteRenderer>().material.color = Color.white;
+                m_Color.material.color = Color.white;
                 m_nDamegeCounter = 0;  //カウントをリセット
                 break;
 
@@ -101,11 +104,8 @@ public class enemy : MonoBehaviour
     //色が変わる処理
     public void Damege()
     {
-        GetComponent<SpriteRenderer>().material.color = Color.red;  //色を赤に変える
-
-        //デバッグログ
-        Debug.Log("色が変わった");
-
+        m_Color.material.color = Color.red;  //色を赤に変える
+        
         m_nDamegeCounter++;  //カウントアップ
 
         if (m_nDamegeCounter >= 60)
