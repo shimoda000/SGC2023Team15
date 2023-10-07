@@ -9,17 +9,29 @@ public class Bullet : MonoBehaviour
 
     public float speed;
     public Vector3 direction;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("EnemyHit");
-
             //敵のインスタンスを取得
             enemy enemy = collision.gameObject.GetComponent<enemy>();
 
+            //ヒット処理
             enemy.Hit();
 
+            //オブジェクトを破棄
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Nest")
+        {
+            //敵のインスタンスを取得
+            nest nest = collision.gameObject.GetComponent<nest>();
+
+            //ヒット処理
+            nest.Hit();
+
+            //オブジェクトを破棄
             Destroy(gameObject);
         }
     }

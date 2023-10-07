@@ -75,12 +75,11 @@ public class enemy : MonoBehaviour
     //ゲームオブジェクトが何かに当たった時に呼び出される
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //敵同士の当たり判定
-        if (collision.collider.tag == ("Enemy"))
-        {
-            //デバッグログ
-            Debug.Log("敵と接触した！");
-        }
+        ////敵同士の当たり判定
+        //if (collision.collider.tag == ("Enemy"))
+        //{
+            
+        //}
     }
 
     //ヒット処理
