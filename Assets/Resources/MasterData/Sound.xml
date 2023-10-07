@@ -33,4 +33,22 @@
 		<assetName>Sound/shot</assetName>
 	</sound>
 
+	<sound>
+		<name>物音</name>
+		<id>enemy01</id>
+		<assetName>Sound/sound12</assetName>
+	</sound>
+
+	<sound>
+		<name>物音</name>
+		<id>enemy02</id>
+		<assetName>Sound/ignition01</assetName>
+	</sound>
+
+	<sound>
+		<name>プレイヤーHit音</name>
+		<id>playerhit</id>
+		<assetName>Sound/playerhit</assetName>
+	</sound>
+
 </sounds>
