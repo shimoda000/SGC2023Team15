@@ -180,7 +180,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a35ec08fc518434988ed5a2c07db023, type: 3}
---- !u!1001 &285913041
+--- !u!1001 &1559350796
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -190,11 +190,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4005968337326784745, guid: 8216f090810339f49add9773082d9822, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.04
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 4005968337326784745, guid: 8216f090810339f49add9773082d9822, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4005968337326784745, guid: 8216f090810339f49add9773082d9822, type: 3}
       propertyPath: m_LocalPosition.z
@@ -228,18 +228,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5219194879888821243, guid: 8216f090810339f49add9773082d9822, type: 3}
-      propertyPath: m_nLife
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5219194879888821243, guid: 8216f090810339f49add9773082d9822, type: 3}
-      propertyPath: m_nFrame
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 5219194879888821243, guid: 8216f090810339f49add9773082d9822, type: 3}
-      propertyPath: m_MaxSpawn
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 7732831629556943231, guid: 8216f090810339f49add9773082d9822, type: 3}
       propertyPath: m_Name
       value: nest
@@ -249,7 +237,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8216f090810339f49add9773082d9822, type: 3}
---- !u!1001 &599909676
+--- !u!1001 &2041414873
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -259,11 +247,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4005968337326784745, guid: 8216f090810339f49add9773082d9822, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.79
+      value: 5.23
       objectReference: {fileID: 0}
     - target: {fileID: 4005968337326784745, guid: 8216f090810339f49add9773082d9822, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.81
+      value: 8.04
       objectReference: {fileID: 0}
     - target: {fileID: 4005968337326784745, guid: 8216f090810339f49add9773082d9822, type: 3}
       propertyPath: m_LocalPosition.z
@@ -499,5 +487,5 @@ SceneRoots:
   - {fileID: 2098187030}
   - {fileID: 2117858722}
   - {fileID: 182895010}
-  - {fileID: 285913041}
-  - {fileID: 599909676}
+  - {fileID: 1559350796}
+  - {fileID: 2041414873}
